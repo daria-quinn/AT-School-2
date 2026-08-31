@@ -23,8 +23,18 @@ dependencies {
     implementation("net.datafaker:datafaker:2.5.4")
 // библиотека для вывода ASCII‑текста
     implementation("com.github.lalyos:jfiglet:0.0.8")
+
+    // Домашка 17 — тайный покупатель (ServeRest)
+    testImplementation("io.rest-assured:rest-assured:5.5.0")
+    testImplementation("com.fasterxml.jackson.core:jackson-databind:2.17.2")
 }
 
 tasks.test {
     useJUnitPlatform()
+
+    // Игнорируем фильтр по конкретному классу, который передаёт IDEA,
+    // чтобы всегда запускался весь набор тестов :test
+    filter {
+        isFailOnNoMatchingTests = false
+    }
 }
