@@ -27,6 +27,10 @@ dependencies {
     // Домашка 17 — тайный покупатель (ServeRest)
     testImplementation("io.rest-assured:rest-assured:5.5.0")
     testImplementation("com.fasterxml.jackson.core:jackson-databind:2.17.2")
+
+    // Домашка 19 — Selenide
+    testImplementation("com.codeborne:selenide:7.4.2")
+    testImplementation("org.slf4j:slf4j-simple:2.0.13")
 }
 
 tasks.test {
